@@ -16,6 +16,7 @@ npm install
 3️⃣ Rode o projeto em modo desenvolvimento
 npm run dev
 
+❗❗Use o salvamento automático para trabalhar bem com nodemon❗❗
 
   ⚠️ IMPORTANTE:
 O projeto deve ser executado utilizando npm run dev.
@@ -80,3 +81,4 @@ Sempre manter separação de responsabilidades.
 Não colocar regra de negócio dentro de controller.
 Não acessar banco direto na rota.
 Manter organização e padrão de nomes.
+
