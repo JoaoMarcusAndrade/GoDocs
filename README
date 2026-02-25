@@ -1,0 +1,2 @@
+powershell -ExecutionPolicy Bypass
+use o codigo acima para habilitar a execução de scripts
