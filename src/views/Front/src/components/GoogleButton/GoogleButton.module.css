@@ -1,0 +1,27 @@
+.GoogleButton {
+    width: 80%;
+    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: var(--cinzaClaro);
+    cursor: pointer;
+    position: relative;
+
+    
+}
+
+.GoogleButton img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    
+    
+}
+.GoogleButton span{
+    position: relative;
+    font-size: medium;
+    left: 50px;
+}

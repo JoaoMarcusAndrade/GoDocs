@@ -1,0 +1,10 @@
+.ButtonForms {
+    background: var(--azulVivido);
+    color: white;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:10px;
+}
