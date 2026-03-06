@@ -2,7 +2,7 @@ async function authEmailBtn() {
     const emailTxt = document.getElementById('emailTxt').value;
 
     try {
-        const response = await fetch('/mail-auth', {
+        const response = await fetch('/mail/auth', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -11,7 +11,7 @@ async function authEmailBtn() {
         })
 
         const data = await response.json()
-        console.log("/mail-auth res:", data)
+        console.log("/mail/auth res:", data)
     } catch (error) {
         console.log(error, "erro ao enviar email")
     }

@@ -11,9 +11,18 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(_dirname, "view", "index.html"));
 });
 
-router.post("/mail-auth", (req, res) => {
+/**
+ * @swagger
+ * /mail/auth:
+ *   post:
+ *     summary: Envia código de autenticação
+ *     responses:
+ *       200:
+ *         description: sucesso
+ */
+router.post("/mail/auth", (req, res) => {
   emailController(req, res)
-  console.log("/mail-auth request")
+  console.log("/mail/auth request")
 })
 
 router.post("/2FA-Verify", (req, res) => {
