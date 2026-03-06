@@ -1,5 +1,7 @@
   LEIA ESTE ARQUIVO PARA ENTENDER COMO USAR O MODELO DE SOFTWARE
 
+docker exec -it redis-auth redis-cli
+
   📦 Tecnologias Utilizadas
 Node.js
 TypeScript
@@ -12,6 +14,14 @@ git clone https://github.com/JoaoMarcusAndrade/GoDocs
 
 2️⃣ Instale as dependências
 npm install
+
+3️⃣ Suba o Redis com Docker
+  Certifique-se de ter o Docker instalado e em execução.
+  Crie o container do Redis (caso ainda não exista):
+docker run -d --name redis-auth -p 6379:6379 --restart unless-stopped redis
+
+  Se o container já existir e estiver parado, inicie com:
+docker start redis-auth
 
 3️⃣ Rode o projeto em modo desenvolvimento
 npm run dev
