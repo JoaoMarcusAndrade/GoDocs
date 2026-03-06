@@ -14,5 +14,3 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 app.use(express.static(path.join(_dirname, "views")));
 app.use(router);
-
- 
