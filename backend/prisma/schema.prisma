@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/models/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id         Int        @id @default(autoincrement())
+  email      String     @unique
+  number     Int        @unique
+  image      String?
+  CPF        String
+  name       String
+  passHash   String     @map("pass_hash")
+  deliveries Delivery[]
+  locations  Location[]
+}
+
+model Location {
+  id         Int     @id @default(autoincrement())
+  number     Int
+  street     String
+  quarter    String
+  city       String
+  state      String
+  complement String?
+  user       User    @relation(fields: [userId], references: [id])
+  userId     Int
+}
+
+enum vehicleType {
+  NULL
+  moto
+  carro
+}
+
+model Courier {
+  id          Int         @id @default(autoincrement())
+  email       String      @unique
+  fullName    String      @map("full_name")
+  image       String
+  CPF         String
+  CNH         String
+  CNGImage    String      @map("CNH_image")
+  vehicleType vehicleType @default(NULL)
+  phone       String
+  passHash    String      @map("pass_hash")
+  deliveries  Delivery[]
+}
+
+model Delivery {
+  id        Int      @id @default(autoincrement())
+  price     Float
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  courier   Courier? @relation(fields: [courierId], references: [id])
+  courierId Int?
+}
