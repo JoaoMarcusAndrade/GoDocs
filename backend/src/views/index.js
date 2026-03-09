@@ -1,17 +1,20 @@
 async function authEmailBtn() {
     const emailTxt = document.getElementById('emailTxt').value;
-
+    const passTxt = document
     try {
-        const response = await fetch('/mail/auth', {
+        const response = await fetch('/sign-in', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ email: emailTxt })
+            body: JSON.stringify({ 
+                email: emailTxt
+                senha: 
+             })
         })
 
         const data = await response.json()
-        console.log("/mail/auth res:", data)
+        console.log("/sign-in res:", data)
     } catch (error) {
         console.log(error, "erro ao enviar email")
     }
@@ -22,7 +25,7 @@ async function FA2Verify() {
     const emailTxt = document.getElementById('emailTxt').value;
 
     try {
-        const response = await fetch('/2FA-verify', {
+        const response = await fetch('/auth/2FA', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -34,7 +37,7 @@ async function FA2Verify() {
         })
 
         const data = await response.json()
-        console.log("/2FA-verify res:", data)
+        console.log("/auth/2FA res:", data)
     } catch (error) { 
         console.log(error, "erro ao enviar codigo 2FA")
     }

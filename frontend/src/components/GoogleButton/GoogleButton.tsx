@@ -7,4 +7,4 @@ const GoogleButton = () => {
   )
 }
 
-export { GoogleButton}
+export { GoogleButton }
