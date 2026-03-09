@@ -1,6 +1,7 @@
 async function authEmailBtn() {
     const emailTxt = document.getElementById('emailTxt').value;
-    const passTxt = document
+    const phoneTxt = document.getElementById('phoneTxt').value;
+    const passTxt = document.getElementById('passTxt').value;
     try {
         const response = await fetch('/sign-in', {
             method: 'POST',
@@ -8,8 +9,9 @@ async function authEmailBtn() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ 
-                email: emailTxt
-                senha: 
+                email: emailTxt,
+                phone: phoneTxt,
+                senha: passTxt
              })
         })
 
