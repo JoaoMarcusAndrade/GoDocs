@@ -14,9 +14,11 @@
     "start": "npm run start -w backend"
   },
   "dependencies": {
-    "@prisma/client": "^6.19.2"
+    "@prisma/client": "^6.19.2",
+    "bcrypt": "^6.0.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "dotenv": "^17.3.1",
     "prisma": "^6.19.2"
   }

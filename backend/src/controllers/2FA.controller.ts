@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import crypto from 'crypto';
+import crypto from "crypto";
 import { client } from '../redis.js';
 export async function FA2verifyController(req: Request, res: Response) {
     const { FA2code, email } = req.body;
