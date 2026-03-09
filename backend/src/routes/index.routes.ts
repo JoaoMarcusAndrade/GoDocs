@@ -45,6 +45,30 @@ router.post("/auth/2FA", (req, res) => {
   console.log("/auth/2FA")
 })
 
+/**
+ * @swagger
+ * /sign-in:
+ *   post:
+ *     summary: Confere codigo enviado
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content: # Response body
+ *            application/json: # Media type
+ *              schema: # Must-have
+ *                type: object # Data type
+ *                proprieties:
+ *                  email:
+ *                    type: string
+ *                  pass:
+ *                    type: string
+ *                  phone: 
+ *                    type: integer
+ *                example:
+ *                  email: example@mail.com
+ *                  pass: 14sF5%and
+ *                  phone: 11991234567
+ */
 router.post("/sign-in", (req, res) => {
   signInController(req, res)
 })
