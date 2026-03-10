@@ -4,6 +4,7 @@ import path from 'path';
 import { FA2verifyController } from '../controllers/2FA.controller.js';
 import { signInController } from '../controllers/signIn.controller.js'
 import { fullUsrController } from '../controllers/fullUsr.controller.js';
+import { loginController } from '../controllers/login.controller.js';
 
 export const router = Router();
 
@@ -103,4 +104,29 @@ router.post("/auth/sign-in", (req, res) => {
  */
 router.post("/auth/endUsr", (req, res) => {
   fullUsrController(req, res)
+})
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     summary: Login com email e senha — retorna sessionToken
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                proprieties:
+ *                  email:
+ *                    type: string
+ *                  pass:
+ *                    type: string
+ *                example:
+ *                  email: example@mail.com
+ *                  pass: 14sF5%and
+ */
+router.post("/auth/login", (req, res) => {
+  loginController(req, res)
+  console.log("/auth/login")
 })
