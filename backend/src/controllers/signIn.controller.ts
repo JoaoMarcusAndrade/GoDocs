@@ -5,7 +5,7 @@ import { client } from "../redis.js";
 export async function signInController(req: Request, res: Response) {
     const { email, phone, pass } = req.body
     const userJson = req.body
-
+    console.log(req.body)
     const validations = [
         { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, value: email, error: "Email inválido!" },
         { regex: /^\d{2}9\d{8}$/, value: phone, error: "Telefone inválido!" },

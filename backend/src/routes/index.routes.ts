@@ -51,7 +51,7 @@ router.post("/auth/2FA", (req, res) => {
  * @swagger
  * /auth/sign-in:
  *   post:
- *     summary: Confere codigo enviado
+ *     summary: envia os primeiros dados de cadastro
  *     responses:
  *       200:
  *         description: OK

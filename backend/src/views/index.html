@@ -9,10 +9,47 @@
 </head>
 
 <body>
-  <input id="emailTxt" type="text">
+  <h2>cadasto</h2>
+
+  <label>Email:</label><br>
+  <input id="emailCad" type="email"><br>
+  <label>Telefone:</label><br>
+  <input id="phoneCad" type="tel"><br>
+  <label>Senha:</label><br>
+  <input id="passCad" type="email">
+  <p>8 digitos, 1 letra maiuscula e minuscula, 1 numero e 1 caractere especial</p>
+  <br>
   <button onclick="authEmailBtn()">confirm</button>
+  <p>esse botão envia o email de autenticação</p>
+  <br>
+
+  
+  <h3>verificação de email</h3>
+  <label>2FA code</label><br>
   <input id="FA2num" type="number" maxlength="6">
   <button onclick="FA2Verify()">verificar número</button>
+
+  <h2>Cadastro 2</h2>
+  <label>Imagem:</label><br>
+  <input id="imgCad" type="file" accept="image/*"><br>
+  <label>Nome:</label><br>
+  <input id="nameCad" type="email"><br>
+  <label>CPF:</label><br>
+  <input id="CPFCad" type="email">
+  <button onclick="createAccount()">confirm</button>
+  <p>esse botão cria a conta</p>
+  <h2>Login</h2>
+
+  <label>Email:</label><br>
+  <input type="email" id="emailLog" name="email" required>
+  <br><br>
+
+  <label>Senha:</label><br>
+  <input type="password" id="passLog" name="password" required>
+  <br><br>
+
+  <button onclick="loginBtn()">Acessar</button>
+
 </body>
 <script src="./index.js"></script>
 
