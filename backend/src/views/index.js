@@ -93,8 +93,8 @@ async function FA2Verify() {
 }
 
 async function loginBtn() {
-    const emailTxt = document.getElementById('emailTxt').value;
-    const passTxt = document.getElementById('passTxt').value;
+    const emailTxt = document.getElementById('emailLog').value;
+    const passTxt = document.getElementById('passLog').value;
     try {
         const response = await fetch('/auth/login', {
             method: 'POST',
