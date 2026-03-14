@@ -5,6 +5,8 @@ import { FA2verifyController } from '../controllers/2FA.controller.js';
 import { signInController } from '../controllers/signIn.controller.js'
 import { fullUsrController } from '../controllers/fullUsr.controller.js';
 import { loginController } from '../controllers/login.controller.js';
+import { passController } from '../controllers/perfil.Controller.js';
+import { authMiddleware } from '../middleware/auth.middleware.js';
 
 export const router = Router();
 
@@ -130,3 +132,5 @@ router.post("/auth/login", (req, res) => {
   loginController(req, res)
   console.log("/auth/login")
 })
+
+router.patch('/user/password', authMiddleware, passController);
