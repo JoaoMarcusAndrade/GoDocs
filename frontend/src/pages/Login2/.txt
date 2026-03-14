@@ -1,0 +1,1 @@
+Login 2-Cadastro step 2 feito,apenas aplicar cores e aplicar placeholder e espaçamentos

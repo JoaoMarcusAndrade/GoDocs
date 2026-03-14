@@ -1,10 +1,10 @@
-import { ButtonForms } from "../ButtonForms/ButtonForms";
-import { FormsInputs } from "../FormsInputs/FormsInputs"
+import { ButtonForms } from "../../components/ButtonForms/ButtonForms";
+import { FormsInputs } from "../../components/FormsInputs/FormsInputs";
 import style from './FormCadastro.module.css'
 import GoDocsMobileIcon from '../../assets/GoDocsMobileIcon.png'
-import { TermosUso } from "../TermosUso/TermosUso";
-import { GoogleButton } from "../GoogleButton/GoogleButton";
-import { ChooseOR } from "../Choose/Choose";
+import { TermosUso } from "../../components/TermosUso/TermosUso";
+import { GoogleButton } from "../../components/GoogleButton/GoogleButton";
+import { ChooseOR } from "../../components/Choose/Choose";
 
 const FormCadastro = () => {
    return (

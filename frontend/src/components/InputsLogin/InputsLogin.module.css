@@ -1,0 +1,14 @@
+.InputsLogin {
+    width: 80%;
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: var(--cinzaEscuro);
+}
+.InputsLogin input{
+    width: 100%;
+    height: 100%;
+}
+#AvatarUser {
+    width: 23vh;
+    height: 23vh;
+}
