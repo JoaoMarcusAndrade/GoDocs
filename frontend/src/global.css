@@ -1,0 +1,25 @@
+:root {
+ --azulRoyal: #0b2a7a;
+ --cinzaEscuro: #5a5a5a;
+ --azulOpaco: #243a5e;
+ --azulClaro: #A9B7C9;
+ --branco: #ffffff;
+ --cinzaClaro: #D9dde3;
+ --azulVivido: #146bde;
+ --azulClaroOpaco: #5170ff;
+}
+h1, p, button, h2, h3, h4, h5, h6, span {
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+

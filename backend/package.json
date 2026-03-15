@@ -1,0 +1,46 @@
+{
+  "name": "godocs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/JoaoMarcusAndrade/DDM2IFOOD#readme",
+  "bugs": {
+    "url": "https://github.com/JoaoMarcusAndrade/DDM2IFOOD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoMarcusAndrade/DDM2IFOOD.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "@types/express": "^5.0.6",
+    "@types/nodemailer": "^7.0.11",
+    "@types/nodemon": "^1.19.6",
+    "D": "^1.0.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.1",
+    "nodemon": "^3.1.11",
+    "prisma": "^6.19.2",
+    "redis": "^5.11.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8"
+  }
+}

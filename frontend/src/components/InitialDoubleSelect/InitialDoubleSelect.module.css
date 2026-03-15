@@ -1,0 +1,36 @@
+.InitialDoubleSelect {
+    border-radius: 10px;
+    background: var(--azulRoyal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.InitialDoubleSelect p {
+   color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.LineDoubleSelect {
+    height: 2px;
+    background: var(--azulVivido);
+    width: 90%;
+}
+.DivImg {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.DivSelects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: baseline;
+    padding:10px;
+}
+.DivImg img{
+    width: 5vh;
+    height: 5vh;
+    margin-right: 6px;
+}

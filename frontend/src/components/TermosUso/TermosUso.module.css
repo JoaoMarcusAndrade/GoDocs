@@ -1,0 +1,6 @@
+.TermosUso {
+    width: auto;
+}
+.TermosUso p{
+    color: var(--cinzaEscuro);
+}

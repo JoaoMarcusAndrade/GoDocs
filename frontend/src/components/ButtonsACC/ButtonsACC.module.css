@@ -1,0 +1,23 @@
+.AccButtons {
+    display: flex; 
+    align-items: center;
+    justify-content: baseline;
+    background-color: var(--azulRoyal);
+    border: solid 1px;
+    border-color: var(--azulVivido);
+    border-radius: 10px;
+    height: 6vh;
+    width: 100%;
+}
+.AccButtons span {
+    font-size: large;
+    color: white;
+    margin-left: 6px;
+}
+.AccButtons img {
+    width: 4vh;
+    height: 4vh;
+}
+.Amaldito {
+    width: 100%;
+}

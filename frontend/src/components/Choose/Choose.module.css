@@ -1,0 +1,15 @@
+.Choose {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.Line {
+    width: 50%;
+    height: 2px;
+    background-color: var(--cinzaEscuro);
+    margin: 5px;
+
+}
