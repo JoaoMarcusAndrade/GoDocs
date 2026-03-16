@@ -6,6 +6,7 @@ import { TermosUso } from "../../components/TermosUso/TermosUso";
 import { GoogleButton } from "../../components/GoogleButton/GoogleButton";
 import { ChooseOR } from "../../components/Choose/Choose";
 import { Link } from "react-router-dom";
+import { authEmailBtn } from "../../services/index";
 
 const Cadastro = () => {
    return (
@@ -17,13 +18,13 @@ const Cadastro = () => {
 
        <div className={style.DivAroundForm}>
          <h1>Cadastro</h1>
-        <FormsInputs PlaceHolderInput="Digite seu Email"></FormsInputs>
-        <FormsInputs PlaceHolderInput="Digite seu telefone"></FormsInputs>
-        <FormsInputs PlaceHolderInput="Digite sua senha"></FormsInputs>
-        <FormsInputs PlaceHolderInput="Confirme sua senha"></FormsInputs>
+        <FormsInputs PlaceHolderInput="Digite seu Email" IdInput="emailCad"></FormsInputs>
+        <FormsInputs PlaceHolderInput="Digite seu telefone" IdInput="phoneCad"></FormsInputs>
+        <FormsInputs PlaceHolderInput="Digite sua senha" IdInput="passCad"></FormsInputs>
+        <FormsInputs PlaceHolderInput="Confirme sua senha" ></FormsInputs>
         <Link to="login" className={style.AccQst}>Já tem conta?</Link>
         
-         <ButtonForms ButtonFormsText="Continuar" ButtonFormsLink="fa2"></ButtonForms>
+         <ButtonForms ButtonFormsText="Continuar" ButtonFormsLink="fa2" ButtonOnClick={authEmailBtn}></ButtonForms>
         
         <ChooseOR></ChooseOR>
         <GoogleButton></GoogleButton>
@@ -32,6 +33,7 @@ const Cadastro = () => {
       </div>
       
    </div>
+   
    
    )
 }

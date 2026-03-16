@@ -1,6 +1,7 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./swagger.js"
+import cors from "cors"
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -10,6 +11,8 @@ export const app = express();
 
 export const __filename = fileURLToPath(import.meta.url);
 export const _dirname = path.dirname(__filename);
+
+app.use(cors())
 
 app.use(express.json())
 
