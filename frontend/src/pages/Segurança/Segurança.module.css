@@ -1,0 +1,55 @@
+.SegDiv {
+    background-color: var(--azulRoyal);
+    height: 67vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 91%;
+}
+.SegTit h1{
+    color: black;
+    font-size: 1.5rem;
+}
+.SegTit h3{
+   font-size: 0.9rem;
+   color: var(--cinzaEscuro);
+}
+.SegTit {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.SegText {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Segp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.SegLine {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+    width: 91%;
+    background-color: var(--cinzaEscuro);
+}
+.SegMailTit{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+.SegMailTit h1{
+   color: white;
+}
+.SegMails{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.SegMails p{
+    color: white;
+}

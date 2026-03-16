@@ -9,6 +9,14 @@ import { CadastroStep2 } from "./pages/CadastroStep2/CadastroStep2";
 import { Login } from "./pages/login_cadastro/FormLogin";
 import { AltConta } from "./pages/AltConta/AltConta";
 import { Config } from "./pages/Config/Config";
+import { FA2 } from "./pages/FA2/Fa2";
+import { Loc } from "./pages/Loc/Loc";
+import { Acessibilidade } from "./pages/Acessibilidade/Acessibilidade";
+import { Mensagens } from "./pages/Mensagens/Mensagens";
+import { InfoLegais } from "./pages/InfoLegais/InfoLegais";
+import { Segurança } from "./pages/Segurança/Segurança";
+import { Delivery } from "./pages/Delivery/Delivery";
+import { DeliveryStep2 } from "./pages/Delivery/DeliveryStep2";
 
 const Router = () => {
     return (
@@ -20,6 +28,14 @@ const Router = () => {
                 <Route path="login" element={<Login />} />
                 <Route path="alt" element={<AltConta/>}/>
                 <Route path="config" element={<Config/>}/>
+                <Route path="fa2" element={<FA2/>}/>
+                <Route path="loc" element={<Loc/>}/>
+                <Route path="acessibilidade" element={<Acessibilidade/>}/>
+                <Route path="msg" element={<Mensagens/>}/>
+                <Route path="infoLegais" element={<InfoLegais/>}/>
+                <Route path="seg" element={<Segurança/>}/>
+                <Route path="delivery" element={<Delivery/>}/>
+                <Route path="delistep2" element={<DeliveryStep2></DeliveryStep2>}/>
                 
             </Route>
 

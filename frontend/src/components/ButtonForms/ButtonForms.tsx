@@ -4,7 +4,7 @@ import style from './ButtonForms.module.css'
 const ButtonForms = (props) => {
    const { ButtonFormsText, ButtonFormsLink } = props;
    return (
-      <Link to={ButtonFormsLink}>
+      <Link to={ButtonFormsLink} className={style.Amaldito}>
          <button className={style.ButtonForms}>{ButtonFormsText}</button>
       </Link>
    )

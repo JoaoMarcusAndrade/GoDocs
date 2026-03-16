@@ -23,7 +23,7 @@ const Cadastro = () => {
         <FormsInputs PlaceHolderInput="Confirme sua senha"></FormsInputs>
         <Link to="login" className={style.AccQst}>Já tem conta?</Link>
         
-         <ButtonForms ButtonFormsText="Continuar" ButtonFormsLink="cadastrostep2"></ButtonForms>
+         <ButtonForms ButtonFormsText="Continuar" ButtonFormsLink="fa2"></ButtonForms>
         
         <ChooseOR></ChooseOR>
         <GoogleButton></GoogleButton>
