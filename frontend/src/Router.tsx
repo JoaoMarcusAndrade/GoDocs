@@ -18,7 +18,10 @@ import { Segurança } from "./pages/Segurança/Segurança";
 import { Delivery } from "./pages/Delivery/Delivery";
 import { DeliveryStep2 } from "./pages/Delivery/DeliveryStep2";
 
+
+
 const Router = () => {
+
     return (
         <Routes>
 
