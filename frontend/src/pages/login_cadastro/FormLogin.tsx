@@ -25,7 +25,7 @@ const Login = () => {
          console.log("Login OK");
 
          localStorage.setItem("user", JSON.stringify(data.user));
-         console.log("USER QUE VAI SALVAR:", result.user);
+         console.log("USER QUE VAI SALVAR:", data.user);
 
          navigate("/home"); // 🚀 redireciona
       } else {
