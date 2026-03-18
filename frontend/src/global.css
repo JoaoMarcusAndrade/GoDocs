@@ -7,6 +7,11 @@
  --cinzaClaro: #D9dde3;
  --azulVivido: #146bde;
  --azulClaroOpaco: #5170ff;
+ --font-size: 16px;
+ 
+}
+body{
+    font-size: var(--font-size);
 }
 h1, p, button, h2, h3, h4, h5, h6, span {
     font-family: sans-serif;

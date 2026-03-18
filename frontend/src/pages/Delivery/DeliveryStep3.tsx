@@ -4,7 +4,7 @@ import { Step3Tracking } from "../../components/DeliveryMap/Passo3Delivery";
 const DeliveryStep3 = () =>{
   return (
     <>
-    <CabecalhoGodocsBack cabecalhoGodocsLink="/delistep2"></CabecalhoGodocsBack>
+    <CabecalhoGodocsBack cabecalhoGodocsLink="/delivery"></CabecalhoGodocsBack>
     <Step3Tracking></Step3Tracking>
     </>
   )

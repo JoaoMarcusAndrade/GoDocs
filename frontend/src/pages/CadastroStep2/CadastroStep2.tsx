@@ -48,7 +48,9 @@ const CadastroStep2 = () => {
     }
 
     const success = await createAccount(name, cpf, file, email);
+    
     if (success) {
+      localStorage.setItem("user", JSON.stringify(success.user));
       navigate("/home"); // 🚀 REDIRECIONA
     } else {
       console.log("Erro ao criar conta");

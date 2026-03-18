@@ -5,7 +5,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 39px;
+    height: 20vh;
+    width: 90%;
+    gap: 20px;
 }
 .InitialDoubleSelect p {
    color: white;
@@ -24,13 +27,22 @@
 }
 .DivSelects {
     display: flex;
-    justify-content: center;
     align-items: center;
     justify-content: baseline;
-    padding:10px;
+    width: 100%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 5px;
+    gap: 5px
 }
 .DivImg img{
     width: 5vh;
     height: 5vh;
     margin-right: 6px;
+}
+.DivAroundSelects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

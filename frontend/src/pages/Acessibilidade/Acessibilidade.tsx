@@ -2,7 +2,7 @@ import { CabecalhoGodocsBack } from '../../components/CabecalhoGoDocsBack/Cabeca
 import styles from './Acessibilidade.module.css'
 import AceIcon from '../../assets/Acessibilidade.png'
 import TextIcon from '../../assets/Texts.png'
-
+import { FontSizeControl } from '../../components/FontSize/FontSizeControl'
 const Acessibilidade = () => {
     return (
         <>
@@ -53,7 +53,11 @@ const Acessibilidade = () => {
                             </div>
                         </div>
 
-                        <span className={styles.percent}>100%</span>
+                        <div className={styles.PlusMinus}>
+                            <FontSizeControl></FontSizeControl>
+                            
+                            
+                        </div>
                     </div>
 
 

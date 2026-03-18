@@ -23,7 +23,9 @@ const Login = () => {
       // 👇 aqui depende do que seu backend retorna
       if (data.token || data.user) {
          console.log("Login OK");
+
          localStorage.setItem("user", JSON.stringify(data.user));
+         console.log("USER QUE VAI SALVAR:", result.user);
 
          navigate("/home"); // 🚀 redireciona
       } else {

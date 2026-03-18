@@ -8,7 +8,9 @@
     flex-direction: column;
     align-items: baseline;
     margin-bottom: 3vh;
-    background-image: "../../assets/motos.png";
+    background-image: url("motos.png");
+    background-size: 100%;
+    
 }
 .DivCarrosel h2{
     font-size: 1rem;
@@ -19,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
 }
 .DivCarroselFath h1 {
     font-size: large;

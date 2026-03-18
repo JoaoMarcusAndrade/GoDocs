@@ -5,7 +5,7 @@ const AltPerfil = () => {
     return (
         <Link to="/alt" className={style.Amaldito}>
             <button className={style.AccButtons}>
-                <img src={PerfilIcon}></img>
+                <img src={PerfilIcon} className={style.AltPerfilIcon}></img>
                 <span>Alterar perfil</span>
             </button>
         </Link>

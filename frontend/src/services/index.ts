@@ -66,7 +66,7 @@ export async function createAccount(
 
         if (!response.ok) {
             console.error("Erro:", response.status);
-            return {success: false};
+            return { success: false };
         }
 
         const data = await response.json();
@@ -74,12 +74,16 @@ export async function createAccount(
 
         return {
             success: true,
-            user: data.user
-        }; //  sucesso
+            user: {
+                name,
+                CPF: cpf,
+                img: base64Img
+            }
+        };
 
     } catch (error) {
         console.log("Erro ao enviar dados:", error);
-        return {success: false}; //  erro
+        return { success: false }; //  erro
     }
 }
 
