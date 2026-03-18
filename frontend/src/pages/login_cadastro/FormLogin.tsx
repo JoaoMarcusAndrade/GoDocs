@@ -13,14 +13,23 @@ const Login = () => {
    const navigate = useNavigate()
 
    const handleLogin = async () => {
-      const res = await loginBtn()
+      const data = await loginBtn();
 
-      if (res) {
-         // Passando o email para a página FA2
-         const email = document.getElementById("emailCad")?.value;  // Capturando o email
-         navigate("/fa2", { state: { email } });  // Passando o email para FA2 via state
+      if (!data) {
+         console.log("Erro no login");
+         return;
       }
-   }
+
+      // 👇 aqui depende do que seu backend retorna
+      if (data.token || data.user) {
+         console.log("Login OK");
+         localStorage.setItem("user", JSON.stringify(data.user));
+
+         navigate("/home"); // 🚀 redireciona
+      } else {
+         console.log("Email ou senha inválidos");
+      }
+   };
 
    return (
       <div className={style.ContainerCadastro}>

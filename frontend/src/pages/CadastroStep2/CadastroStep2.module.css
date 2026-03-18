@@ -7,6 +7,7 @@
 .PhotoUp img {
     width: 16vh;
     height: 16vh;
+    border-radius: 100px;
 }
 .botaoUpload {
     border: 1px solid;

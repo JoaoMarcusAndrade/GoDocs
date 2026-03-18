@@ -5,16 +5,25 @@ import { ButtonForms } from "../../components/ButtonForms/ButtonForms"
 import { createAccount } from "../../services"
 import { useRef } from "react"
 import { useLocation } from "react-router-dom"
-const CadastroStep2 = () => {
-    const location = useLocation();
-   const { email } = location.state || {};  // Pegando o email da navegação
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
-   console.log("Email na CadastroStep2:", email);
+const CadastroStep2 = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { email } = location.state || {};  // Pegando o email da navegação
+  const [preview, setPreview] = useState<string | null>(null);
+
+  console.log("Email na CadastroStep2:", email);
   const imgInputRef = useRef<HTMLInputElement | null>(null); // Referência para o campo de imagem
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? e.target.files[0] : null;
-    // Podemos usar a função setState para lidar com a imagem no futuro, mas vamos continuar usando getElementById
+
+    if (file) {
+      const imageUrl = URL.createObjectURL(file); // 🔥 cria URL temporária
+      setPreview(imageUrl);
+    }
   };
 
   const handleCreateAccount = async () => {
@@ -38,7 +47,12 @@ const CadastroStep2 = () => {
       return;
     }
 
-    await createAccount(name, cpf, file);  // Passa os dados para a função
+    const success = await createAccount(name, cpf, file, email);
+    if (success) {
+      navigate("/home"); // 🚀 REDIRECIONA
+    } else {
+      console.log("Erro ao criar conta");
+    } // Passa os dados para a função
   };
 
   return (
@@ -46,7 +60,10 @@ const CadastroStep2 = () => {
       <CabecalhoForms BackButtonLink="/" Tittle="Criar conta" />
       <div className={style.Cad2}>
         <div className={style.PhotoUp}>
-          <img src={AvatarDefaultIcon} alt="Avatar" />
+          <img
+            src={preview || AvatarDefaultIcon}
+            alt="Avatar"
+          />
           <label className={style.botaoUpload}>
             Selecionar foto
             <input

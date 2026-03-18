@@ -34,12 +34,16 @@ export async function authEmailBtn(): Promise<any> {
     }
 }
 
-export async function createAccount(name: string, cpf: string, file: File, email: string): Promise<void> {
+export async function createAccount(
+    name: string,
+    cpf: string,
+    file: File,
+    email: string
+): Promise<{ success: boolean; user?: any }> {
     let base64Img: string | null = null;
 
     const reader = new FileReader();
 
-    // Lê a imagem e converte para base64
     base64Img = await new Promise<string>((resolve, reject) => {
         reader.onload = () => resolve(reader.result as string);
         reader.onerror = reject;
@@ -53,39 +57,31 @@ export async function createAccount(name: string, cpf: string, file: File, email
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                email: email,  // Passando o email para o backend
+                email,
                 img: base64Img,
-                name: name,
+                name,
                 CPF: cpf
             })
         });
 
-        // Verificando se a resposta foi bem-sucedida
         if (!response.ok) {
-            console.error("Erro na requisição. Status:", response.status, response.statusText);
-            const errorText = await response.text();  // Se não for OK, leia como texto
-            console.log("Erro do servidor:", errorText);
-            return;
+            console.error("Erro:", response.status);
+            return {success: false};
         }
 
-        // Verifica se o tipo de conteúdo é JSON
-        const contentType = response.headers.get("Content-Type");
-        if (!contentType?.includes("application/json")) {
-            console.error("Esperava JSON, mas o servidor retornou:", contentType);
-            const text = await response.text();
-            console.log("Conteúdo recebido:", text);
-            return;
-        }
-
-        // Processa a resposta JSON
         const data = await response.json();
-        console.log("/auth/endUsr res:", data);
+        console.log("Sucesso:", data);
+
+        return {
+            success: true,
+            user: data.user
+        }; //  sucesso
 
     } catch (error) {
         console.log("Erro ao enviar dados:", error);
+        return {success: false}; //  erro
     }
 }
-
 
 export async function FA2Verify(code: string, email: string) {
 

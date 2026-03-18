@@ -17,6 +17,7 @@ import { InfoLegais } from "./pages/InfoLegais/InfoLegais";
 import { Segurança } from "./pages/Segurança/Segurança";
 import { Delivery } from "./pages/Delivery/Delivery";
 import { DeliveryStep2 } from "./pages/Delivery/DeliveryStep2";
+import { DeliveryStep3 } from "./pages/Delivery/DeliveryStep3";
 
 
 
@@ -39,6 +40,7 @@ const Router = () => {
                 <Route path="seg" element={<Segurança/>}/>
                 <Route path="delivery" element={<Delivery/>}/>
                 <Route path="delistep2" element={<DeliveryStep2></DeliveryStep2>}/>
+                <Route path="delistep3" element={<DeliveryStep3></DeliveryStep3>}/>
                 
             </Route>
 

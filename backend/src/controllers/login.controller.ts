@@ -41,7 +41,12 @@ export async function loginController(req: Request, res: Response) {
 
         return res.status(200).json({
             message: "Login bem-sucedido",
-            token
+            token,
+            user: {
+                name: user.name,
+                CPF: user.CPF,
+                img: user.image
+            }
         });
 
     } catch (err) {
