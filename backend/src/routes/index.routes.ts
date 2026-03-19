@@ -7,6 +7,8 @@ import { fullUsrController } from '../controllers/fullUsr.controller.js';
 import { loginController } from '../controllers/login.controller.js';
 import { passController } from '../controllers/perfil.Controller.js';
 import { authMiddleware } from '../middleware/auth.middleware.js';
+import { historicoController } from '../controllers/historico.controller.js';
+import { finalizarCorridaController } from '../controllers/finalcorrida.controller.js';
 
 export const router = Router();
 
@@ -133,4 +135,26 @@ router.post("/auth/login", (req, res) => {
   console.log("/auth/login")
 })
 
+
+
 router.patch('/user/password', authMiddleware, passController);
+
+/**
+ * @swagger
+ * /user/historico:
+ *   get:
+ *     summary: Retorna histórico de corridas do usuário autenticado
+ *     parameters:
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [PENDENTE, EM_ROTA, ENTREGUE]
+ *         description: Filtra por status (opcional)
+ *     responses:
+ *       200:
+ *         description: Lista de entregas
+ */
+router.get('/user/historico', authMiddleware, historicoController);
+
+router.patch('/delivery/:id/finalizar', authMiddleware, finalizarCorridaController);
