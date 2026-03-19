@@ -1,0 +1,7 @@
+.CarroselButton {
+    width: 20vh;
+    background-color:  var(--azulRoyal);
+    color: white;
+    border-radius: 5px;;
+    height: 3vh;
+}

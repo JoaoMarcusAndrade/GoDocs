@@ -1,0 +1,28 @@
+.NavBottom {
+    width: 100%;
+    background-color: #00167a; /*Colocar na global*/
+    height: 7vh; /*Transformar em vh*/
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    bottom: 0;
+    position: fixed;
+}
+.NavBottom p{
+    color:aliceblue;
+
+}
+.NavButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.NavButton svg{
+   height: 10vh;
+   width: 4vh;
+   color: white;
+
+}
+.NavButton svg[type='selecionado']{
+    color: #8485dd;
+}

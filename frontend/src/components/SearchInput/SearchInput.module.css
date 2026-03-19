@@ -1,0 +1,34 @@
+.SearchDiv {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: var(--azulClaroOpaco);
+    cursor: none;
+    height: 7vh;
+    width: 80%;
+    margin-bottom: 3vh;/*transformar em vh*/
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: end;
+    
+}
+
+.SearchDiv svg{
+    color: var(--azulRoyal);
+    height: 3vh;
+    width: 5vh;
+}
+
+.SearchInput {
+    height: 100%;
+    border: none;
+    width: 100%;
+    background: none;
+}
+.SearchInput::placeholder{
+    font-size: 1.1rem;
+}
+.SearchDiv a{
+    width: 100%;
+}

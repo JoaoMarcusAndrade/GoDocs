@@ -1,0 +1,18 @@
+.CabecalhoForms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background: var(--branco);
+    width: 100%;
+    /*margin-bottom: 50px;*/
+}
+.CabecalhoForms svg{
+    width: 5vh;
+    height: 5vh; /*Transformar em VH*/
+    color: var(--azulRoyal);
+}
+.CabecalhoForms h1{
+    font-size: 1.7rem;
+    color: var(--cinzaEscuro)
+}

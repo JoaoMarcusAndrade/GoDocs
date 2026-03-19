@@ -1,0 +1,20 @@
+{
+  "name": "godocs",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build --workspaces",
+    "start": "npm run start -w backend"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "react-router-dom": "^7.13.1"
+  }
+}

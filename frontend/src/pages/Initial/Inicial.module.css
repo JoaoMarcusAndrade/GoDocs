@@ -1,0 +1,14 @@
+.Inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.InicialInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 2vh;
+}
+.InicialInfo h3 {
+    font-size: 1.7rem;
+}

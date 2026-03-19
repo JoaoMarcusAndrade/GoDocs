@@ -1,0 +1,38 @@
+.DivButtonsConfig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.OtherButtons {
+    width: 95%;
+    height: 7vh;
+    border: none;
+    border-color: var(--cinzaClaro);
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    border-radius: 10px;
+}
+.OtherButtons span {
+    font-size: large;
+    margin-left: 6px;
+}
+.OtherButtons svg {
+    width: 3vh;
+    height:5vh;
+    margin-left: 5px;
+}
+.OtherButtons img {
+    width: 3vh;
+    height: 3vh;
+}
+.SairContav {
+    color: red;
+}
+.Amaldito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

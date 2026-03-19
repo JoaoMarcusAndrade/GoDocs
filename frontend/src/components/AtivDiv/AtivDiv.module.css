@@ -1,0 +1,12 @@
+.AtivDiv {
+    background-color: var(--azulRoyal);
+    height: 67vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 91%;
+}
+.AtivDiv p{
+    color: white;
+}

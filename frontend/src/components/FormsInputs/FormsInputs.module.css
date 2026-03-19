@@ -1,0 +1,10 @@
+.FormsInputs{
+    width: 80%;
+    height: 5.6vh;
+    border: 2px var(--cinzaClaro) solid;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.FormsInputs::placeholder{
+    font-size: 1.2rem;
+}

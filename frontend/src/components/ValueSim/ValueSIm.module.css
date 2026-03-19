@@ -1,0 +1,31 @@
+.ValueSim {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: var(--azulRoyal);
+    width: 90%;
+    margin-bottom: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.ValueSimSon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.ValueSimSonText {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.ValueSimSonText h6 {
+    font-size: medium;
+    padding-left: 13px;
+}
+
+.ValueSimSonText p {
+    padding-left: 8px;
+}

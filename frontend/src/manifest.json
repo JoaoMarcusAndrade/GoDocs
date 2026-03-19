@@ -1,0 +1,20 @@
+{
+  "short_name": "GoDocs",
+  "name": "GoDocs - Deliveries",
+  "icons": [
+    {
+      "src": "icons/godocs-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/godocs-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "theme_color": "#4CAF50"
+}

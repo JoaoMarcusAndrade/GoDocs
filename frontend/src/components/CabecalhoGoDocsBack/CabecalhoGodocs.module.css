@@ -1,0 +1,25 @@
+.CabecalhoGodocs {
+    width: 100%;
+    background-color: var(--azulClaroOpaco);
+    border: 2px solid;
+    border-color: #031b83;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: baseline;
+    position: fixed;
+    top: 0;
+    align-items: center;
+}
+.CabecalhoGodocs img {
+ width: 17vh;
+ height: 4.5vh;
+ padding: 5px;
+}
+.CabecalhoGodocs svg{
+    margin-right: 13vh;
+    color: white;
+    width: 3vh;
+    height: 3vh;
+}
