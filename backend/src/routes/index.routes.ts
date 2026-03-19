@@ -27,29 +27,29 @@ router.get("/", (req, res) => {
 
 /**
  * @swagger
- * /auth/2FA:
+ * /auth/login:
  *   post:
- *     summary: Confere codigo enviado
+ *     summary: Login com email e senha — retorna sessionToken
  *     responses:
  *       200:
  *         description: OK
- *         content: # Response body
- *            application/json: # Media type
- *              schema: # Must-have
- *                type: object # Data type
+ *         content:
+ *            application/json:
+ *              schema:
+ *                type: object
  *                proprieties:
  *                  email:
  *                    type: string
- *                  FA2code:
- *                    type: integer
+ *                  pass:
+ *                    type: string
  *                example:
  *                  email: example@mail.com
- *                  FA2code: 104985
+ *                  pass: 14sF5%and
  */
-router.post("/auth/2FA", (req, res) => {
-  FA2verifyController(req, res)
-  console.log("/auth/2FA")
-})
+router.post("/auth/login", (req, res) => {
+  loginController(req, res)
+  console.log("/auth/login")
+});
 
 /**
  * @swagger
@@ -77,6 +77,32 @@ router.post("/auth/2FA", (req, res) => {
  */
 router.post("/auth/sign-in", (req, res) => {
   signInController(req, res)
+})
+
+/**
+ * @swagger
+ * /auth/2FA:
+ *   post:
+ *     summary: Confere codigo enviado
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content: # Response body
+ *            application/json: # Media type
+ *              schema: # Must-have
+ *                type: object # Data type
+ *                proprieties:
+ *                  email:
+ *                    type: string
+ *                  FA2code:
+ *                    type: integer
+ *                example:
+ *                  email: example@mail.com
+ *                  FA2code: 104985
+ */
+router.post("/auth/2FA", (req, res) => {
+  FA2verifyController(req, res)
+  console.log("/auth/2FA")
 })
 
 /**
@@ -109,33 +135,6 @@ router.post("/auth/sign-in", (req, res) => {
 router.post("/auth/endUsr", (req, res) => {
   fullUsrController(req, res)
 })
-/**
- * @swagger
- * /auth/login:
- *   post:
- *     summary: Login com email e senha — retorna sessionToken
- *     responses:
- *       200:
- *         description: OK
- *         content:
- *            application/json:
- *              schema:
- *                type: object
- *                proprieties:
- *                  email:
- *                    type: string
- *                  pass:
- *                    type: string
- *                example:
- *                  email: example@mail.com
- *                  pass: 14sF5%and
- */
-router.post("/auth/login", (req, res) => {
-  loginController(req, res)
-  console.log("/auth/login")
-})
-
-
 
 router.patch('/user/password', authMiddleware, passController);
 
@@ -153,8 +152,10 @@ router.patch('/user/password', authMiddleware, passController);
  *         description: Filtra por status (opcional)
  *     responses:
  *       200:
- *         description: Lista de entregas
+ *         description: Lista de corridas anteriores
  */
 router.get('/user/historico', authMiddleware, historicoController);
+
+
 
 router.patch('/delivery/:id/finalizar', authMiddleware, finalizarCorridaController);

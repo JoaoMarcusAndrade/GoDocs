@@ -1,10 +1,12 @@
 import { authEmail } from "../services/authEmail.service.js";
 import { Request, Response } from 'express'
 import { client } from "../redis.js";
+import { prisma } from "../database/prisma.js";
 
 export async function signInController(req: Request, res: Response) {
     const { email, phone, pass } = req.body
     const userJson = req.body
+
     console.log(req.body)
     const validations = [
         { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, value: email, error: "Email inválido!" },
@@ -19,6 +21,17 @@ export async function signInController(req: Request, res: Response) {
     }
 
     try {
+
+        const user = await prisma.user.findUnique({
+            where: { email }
+        });
+
+        if (user) {
+            return res.status(409).json({
+                error: "Usuário existente"
+            });
+        }
+        
         console.log("authcontroller")
         await client.del(`2FA:${email}`)
         await client.del(`Usr:${email}`)
@@ -31,6 +44,6 @@ export async function signInController(req: Request, res: Response) {
         })
         return res.status(200).json({ message: "Email enviado!" });
     } catch {
-        return res.status(500).json({ message: "deu errado" })
+        return res.status(500).json({ message: "Erro interno no servidor" })
     }
 }

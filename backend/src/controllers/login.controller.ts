@@ -20,8 +20,8 @@ export async function loginController(req: Request, res: Response) {
         });
 
         if (!user) {
-            return res.status(404).json({
-                error: "Usuário não encontrado"
+            return res.status(401).json({
+                error: "Email ou senha inválidos"
             });
         }
 
@@ -29,7 +29,7 @@ export async function loginController(req: Request, res: Response) {
 
         if (!passCorrect) {
             return res.status(401).json({
-                error: "Senha incorreta"
+                error: "Email ou senha inválidos"
             });
         }
 
@@ -39,7 +39,7 @@ export async function loginController(req: Request, res: Response) {
             EX: 60 * 60 * 24
         });
 
-        return res.status(200).json({
+        return res.status(201).json({
             message: "Login bem-sucedido",
             token,
             user: {
@@ -53,9 +53,6 @@ export async function loginController(req: Request, res: Response) {
 
         console.error(err);
 
-        return res.status(500).json({
-            error: "Erro interno do servidor"
-        });
-
+        return res.status(500).json({ error: "Erro interno do servidor" });
     }
 }

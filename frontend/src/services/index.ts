@@ -42,7 +42,10 @@ export async function createAccount(
 ): Promise<{ success: boolean; user?: any }> {
     let base64Img: string | null = null;
 
+    console.log()
+
     const reader = new FileReader();
+
 
     base64Img = await new Promise<string>((resolve, reject) => {
         reader.onload = () => resolve(reader.result as string);

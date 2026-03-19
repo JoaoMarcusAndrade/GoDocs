@@ -1,14 +1,13 @@
-import { Response, Request } from "express";
-import { prisma } from "../database/prisma.js";
-import bcrypt from "bcrypt";
 import { AuthRequest } from "../middleware/auth.middleware.js";
-
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+import { prisma } from "../database/prisma.js";
+import { Response, Request } from "express";
+import bcrypt from "bcrypt";
 
 export async function passController(req: AuthRequest, res: Response) {
     const { oldPassword, newPassword, confirmPassword } = req.body;
     const userEmail = req.userEmail
-
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    
     if (!oldPassword || !newPassword || !confirmPassword) {
         return res.status(400).json({error: "Todos os campos são obrigatórios."})
     }
