@@ -44,7 +44,7 @@ const Login = () => {
                <h1>Login</h1>
 
                <FormsInputs PlaceHolderInput="Digite seu Email" IdInput="emailLog" />
-               <FormsInputs PlaceHolderInput="Digite sua senha" IdInput="passLog" />
+               <FormsInputs PlaceHolderInput="Digite sua senha" IdInput="passLog" TypeInput="password"/>
 
                <Link to="/" className={style.AccQst}>Não tem conta?</Link>
 

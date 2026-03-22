@@ -2,19 +2,22 @@
     width: 95%;
     height: 7vh;
     border: none;
-    border-color: var(--cinzaClaro);
+    border-color: var(----bordaOtherButtons);
     display: flex;
     justify-content: baseline;
     align-items: center;
     border-radius: 10px;
+    background: var(--backOtherButtons);
 }
 .OtherButtons span {
     font-size: large;
     margin-left: 6px;
+    color: var(--textoPreto);
 }
 .OtherButtons svg {
     width: 3vh;
     margin-left: 5px;
+    color: rgb(0, 0, 0);
 }
 .OtherButtons img {
     width: 3vh;

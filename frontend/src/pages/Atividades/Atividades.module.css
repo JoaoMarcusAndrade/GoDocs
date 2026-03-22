@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: var(--branco);
 }
 .Atividadesh1texts{
     width: 100%;
@@ -13,11 +14,11 @@
 }
 .Atividadesh1texts h1 {
     font-size: 2.9rem;
-    color: var(--azulRoyal);
+    color: var(--textAzul);
 }
 .Atividadesh1texts h2 {
     font-size: 1.9rem; 
-    color: rgb(34, 34, 34);
+    color: var(--textPreto2);
 }
 .AtivLine {
     height: 4px;

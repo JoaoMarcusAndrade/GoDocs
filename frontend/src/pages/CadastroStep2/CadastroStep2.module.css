@@ -46,7 +46,7 @@
     align-items: center;
     width: 80%;
     border: 2px solid;
-    border-color: var(--cinzaEscuro);
+    border-color: var(--bordaInput2);
     border-radius: 10px;
 
 }

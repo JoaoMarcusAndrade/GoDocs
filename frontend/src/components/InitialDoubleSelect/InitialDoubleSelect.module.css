@@ -1,6 +1,6 @@
 .InitialDoubleSelect {
     border-radius: 10px;
-    background: var(--azulRoyal);
+    background: var(--backgroundAzulAcinzentado);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
 }
 .LineDoubleSelect {
     height: 2px;
-    background: var(--azulVivido);
+    background: var(--azulLinha);
     width: 90%;
 }
 .DivImg {

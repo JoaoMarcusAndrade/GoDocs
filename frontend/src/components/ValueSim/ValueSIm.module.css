@@ -1,7 +1,7 @@
 .ValueSim {
     border-radius: 15px;
     border: 2px solid;
-    border-color: var(--azulRoyal);
+    border-color: var(--backgroundAzulAcinzentado);
     width: 90%;
     margin-bottom: 3vh;
     display: flex;
@@ -24,8 +24,10 @@
 .ValueSimSonText h6 {
     font-size: medium;
     padding-left: 13px;
+    color: var(--textoPreto);
 }
 
 .ValueSimSonText p {
     padding-left: 8px;
-}
+    color: var(--textoPreto);
+} 

@@ -10,9 +10,9 @@
 .CabecalhoForms svg{
     width: 5vh;
     height: 5vh; /*Transformar em VH*/
-    color: var(--azulRoyal);
+    color: var(--cabSvg);
 }
 .CabecalhoForms h1{
     font-size: 1.7rem;
-    color: var(--cinzaEscuro)
+    color: var(--cabTextForm)
 }

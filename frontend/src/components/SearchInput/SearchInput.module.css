@@ -1,7 +1,7 @@
 .SearchDiv {
     border-radius: 50px;
     border: 2px solid;
-    border-color: var(--azulClaroOpaco);
+    border-color: var(--bordaInput);
     cursor: none;
     height: 7vh;
     width: 80%;
@@ -15,7 +15,7 @@
 }
 
 .SearchDiv svg{
-    color: var(--azulRoyal);
+    color: var(--svgIcons);
     height: 3vh;
     width: 5vh;
 }

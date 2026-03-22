@@ -12,12 +12,14 @@
     top: 0;
     align-items: center;
 }
+
 .CabecalhoGodocs img {
- width: 17vh;
- height: 4.5vh;
- padding: 5px;
+    width: 17vh;
+    height: 4.9vh;
+    padding: 5px;
 }
-.CabecalhoGodocs svg{
+
+.CabecalhoGodocs svg {
     margin-right: 13vh;
     color: white;
     width: 3vh;

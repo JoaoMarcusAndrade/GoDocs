@@ -7,11 +7,57 @@
  --cinzaClaro: #D9dde3;
  --azulVivido: #146bde;
  --azulClaroOpaco: #5170ff;
+ --azulRoyalFundo: #00167a;
+ --textoPreto: black;
+ --bordaLinha: #5a5a5a;
+ --bordaInput3: #D9dde3;
+ --bordaInput2: #5a5a5a;
+ --placeHolderColor: #5a5a5a;
+ --cabTextForm: #5a5a5a;
+ --cabSvg: #00167a;
+ --backgroundAzulAcinzentado: #0b2a7a;
+ --azulLinha: var(--azulVivido);
+ --svgIcons: var(--azulRoyal);
+ --bordaInput: var(--azulClaroOpaco);
+ --fundoAtiv: var(--azulRoyalFundo); 
+ --textAzul: var(--azulRoyal);
+ --textPreto2: #242121; 
+ --fundoBotao: var(--azulRoyal);
+ --bordaOtherButtons: var(--cinzaClaro);
+ --backOtherButtons: rgb(235, 235, 235);
+ --svgBlack: black;
+ /*DarkMode*/
+ --azulEscuroDark: #0f172a;
+ --azulOpacoDarkBorda: #334155;
+ --brancoDarkModeTexto: white;
+ --cinzaDarkModeText2: #94a3b8;
  --font-size: 16px;
  
 }
 body{
     font-size: var(--font-size);
+}
+body[data-theme="dark"] {
+  --branco: #0f172a;
+  --textoPreto: white;
+  --bordaLinha: #334155;
+  --bordaInput3: #c7c1c1;
+  --bordaInput2: #c7c1c1;
+  --placeHolderColor: white;
+  --cabSvg: white;
+  --cabTextForm: white;
+  --backgroundAzulAcinzentado: #1e293b;
+  --azulLinha: #334155;
+  --svgIcons: white;
+  --bordaInput: #334155;
+  --fundoAtiv: #1e293b; 
+  --textAzul: white;
+  --textPreto2: #94a3b8;
+  --fundoBotao: #1e293b;
+  --bordaOtherButtons: #0f172a;
+  --backOtherButtons: #151C2D;
+  --svgBlack: white;
+  
 }
 h1, p, button, h2, h3, h4, h5, h6, span {
     font-family: sans-serif;

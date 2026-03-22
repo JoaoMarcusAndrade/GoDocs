@@ -1,6 +1,6 @@
 .NavBottom {
     width: 100%;
-    background-color: #00167a; /*Colocar na global*/
+    background-color: var(--backgroundAzulAcinzentado); /*Colocar na global*/
     height: 7vh; /*Transformar em vh*/
     display: flex;
     justify-content: center;

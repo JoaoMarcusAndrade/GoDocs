@@ -88,7 +88,7 @@ const Step2ChooseDelivery = () => {
 
         <div className={styles.deliveryInfo}>
           <span>{routeInfo.duration}</span>
-          <p>Entregador parceiro a {routeInfo.duration} min de distância - Entrega Moto</p>
+          <p>Entregador parceiro a {routeInfo.duration} de distância - Entrega Moto</p>
           <span>R${preco}</span>
         </div>
 

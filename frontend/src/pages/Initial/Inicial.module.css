@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: var(--branco);
 }
 .InicialInfo {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     margin-bottom: 2vh;
+    color: var(--textoPreto);
 }
 .InicialInfo h3 {
     font-size: 1.7rem;

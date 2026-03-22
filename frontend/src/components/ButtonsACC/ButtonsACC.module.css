@@ -2,9 +2,9 @@
     display: flex; 
     align-items: center;
     justify-content: baseline;
-    background-color: var(--azulRoyal);
+    background-color: var(--fundoBotao);
     border: solid 1px;
-    border-color: var(--azulVivido);
+    border-color: var(--azulLinha);
     border-radius: 10px;
     height: 6vh;
     width: 100%;

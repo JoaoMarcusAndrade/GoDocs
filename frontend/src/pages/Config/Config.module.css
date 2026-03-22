@@ -1,3 +1,7 @@
+.Configs {
+    background-color: var(--branco);
+    height: 95vh;
+}
 .DivButtonsConfig {
     display: flex;
     flex-direction: column;
@@ -14,15 +18,18 @@
     justify-content: baseline;
     align-items: center;
     border-radius: 10px;
+    background-color: var(--backOtherButtons);
 }
 .OtherButtons span {
     font-size: large;
     margin-left: 6px;
+    color: var(--textoPreto);
 }
 .OtherButtons svg {
     width: 3vh;
     height:5vh;
     margin-left: 5px;
+    color: var(--svgBlack);
 }
 .OtherButtons img {
     width: 3vh;
@@ -35,4 +42,141 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.ConfigText {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+.ConfigText h1{
+  margin-left: 10px;
+  color: var(--textoPreto);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  z-index: 999;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+
+  background: var(--branco);
+  border-radius: 20px 20px 0 0;
+
+  padding: 20px 16px;
+
+  animation: slideUp 0.25s ease;
+}
+
+/* título */
+.modal h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--textoPreto);
+  margin-bottom: 15px;
+}
+
+/* linhas (modo claro / escuro) */
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-top: 1px solid var(--bordaLinha);
+}
+
+.option:last-of-type {
+  border-bottom: 1px solid var(--bordaLinha);
+}
+
+/* radio bonito */
+.option input[type="radio"] {
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #333;
+  border-radius: 50%;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.option input[type="radio"]:checked::after {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  background: black;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.option span {
+    color: var(--textoPreto);
+}
+
+/* botão salvar */
+.saveBtn {
+  width: 100%;
+  margin-top: 20px;
+
+  padding: 12px;
+
+  background: var(--azulVivido);
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.saveBtn:hover {
+  background: #1d4ed8;
+}
+
+/* cancelar */
+.cancelBtn {
+  display: block;
+  margin: 12px auto 0;
+
+  background: none;
+  border: none;
+
+  color: var(--cinzaEscuro);
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+/* animação */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

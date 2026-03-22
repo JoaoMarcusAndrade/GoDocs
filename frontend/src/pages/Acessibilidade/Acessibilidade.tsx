@@ -3,22 +3,25 @@ import styles from './Acessibilidade.module.css'
 import AceIcon from '../../assets/Acessibilidade.png'
 import TextIcon from '../../assets/Texts.png'
 import { FontSizeControl } from '../../components/FontSize/FontSizeControl'
+import { useAccessibility } from '../../context/AccessibilityContext'
 const Acessibilidade = () => {
+    const { enabled, setEnabled } = useAccessibility();
+    const { handleRead } = useAccessibility();
     return (
         <>
             <CabecalhoGodocsBack cabecalhoGodocsLink="/config"></CabecalhoGodocsBack>
             <div className={styles.container}>
                 <img src={AceIcon} className={styles.icon}></img>
 
-                <h1 className={styles.title}>Acessibilidade</h1>
+                <h1 className={styles.title} onMouseEnter={handleRead}>Acessibilidade</h1>
 
-                <p className={styles.description}>
+                <p className={styles.description} onMouseEnter={handleRead}>
                     Defina suas preferências de acessibilidade.
                 </p>
 
-                <p className={styles.description}>
+                <p className={styles.description} onMouseEnter={handleRead}>
                     Saiba como funciona a acessibilidade na plataforma da GoDocs,
-                    <span className={styles.link}> acesse nosso Site.</span>
+                    <span className={styles.link} onMouseEnter={handleRead}> acesse nosso Site.</span>
                 </p>
 
                 <div className={styles.options}>
@@ -29,14 +32,15 @@ const Acessibilidade = () => {
                             <div className={styles.icon}><img src={AceIcon} className={styles.icon}></img></div>
 
                             <div>
-                                <p className={styles.optionTitle}>Audição</p>
-                                <p className={styles.optionDesc}>
+                                <p className={styles.optionTitle} onMouseEnter={handleRead}>Audição</p>
+                                <p className={styles.optionDesc} onMouseEnter={handleRead}>
                                     Opção de Leitura dos textos por áudio
                                 </p>
                             </div>
                         </div>
 
-                        <input type="checkbox" className={styles.toggle} />
+                        <input type="checkbox" className={styles.toggle} checked={enabled}
+                            onChange={(e) => setEnabled(e.target.checked)} onMouseEnter={handleRead} alt="Ativar opção de leitra"/>
                     </div>
 
 
@@ -46,8 +50,8 @@ const Acessibilidade = () => {
                             <div className={styles.icon}><img src={TextIcon} className={styles.icon}></img></div>
 
                             <div>
-                                <p className={styles.optionTitle}>Texto</p>
-                                <p className={styles.optionDesc}>
+                                <p className={styles.optionTitle} onMouseEnter={handleRead}>Texto</p>
+                                <p className={styles.optionDesc} onMouseEnter={handleRead}>
                                     Aumentar tamanho das Fontes
                                 </p>
                             </div>
@@ -55,8 +59,6 @@ const Acessibilidade = () => {
 
                         <div className={styles.PlusMinus}>
                             <FontSizeControl></FontSizeControl>
-                            
-                            
                         </div>
                     </div>
 
@@ -69,14 +71,14 @@ const Acessibilidade = () => {
                             </svg></div>
 
                             <div>
-                                <p className={styles.optionTitle}>Alto Contraste</p>
-                                <p className={styles.optionDesc}>
+                                <p className={styles.optionTitle} onMouseEnter={handleRead}>Alto Contraste</p>
+                                <p className={styles.optionDesc} onMouseEnter={handleRead}>
                                     Ativar o Alto Contraste
                                 </p>
                             </div>
                         </div>
 
-                        <input type="checkbox" className={styles.toggle} />
+                        <input type="checkbox" className={styles.toggle} onMouseEnter={handleRead} alt="ativar alto contraste"/>
                     </div>
 
                 </div>
