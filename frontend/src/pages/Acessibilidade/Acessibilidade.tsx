@@ -4,9 +4,11 @@ import AceIcon from '../../assets/Acessibilidade.png'
 import TextIcon from '../../assets/Texts.png'
 import { FontSizeControl } from '../../components/FontSize/FontSizeControl'
 import { useAccessibility } from '../../context/AccessibilityContext'
+import { useTheme } from '../../context/ThemeContext'
+
 const Acessibilidade = () => {
-    const { enabled, setEnabled } = useAccessibility();
-    const { handleRead } = useAccessibility();
+    const { enabled, setEnabled, handleRead } = useAccessibility();
+    const { theme, setTheme } = useTheme();
     return (
         <>
             <CabecalhoGodocsBack cabecalhoGodocsLink="/config"></CabecalhoGodocsBack>
@@ -78,7 +80,14 @@ const Acessibilidade = () => {
                             </div>
                         </div>
 
-                        <input type="checkbox" className={styles.toggle} onMouseEnter={handleRead} alt="ativar alto contraste"/>
+                        <input
+                            type="checkbox"
+                            className={styles.toggle}
+                            checked={theme === "high-contrast"}
+                            onChange={(e) => setTheme(e.target.checked ? "high-contrast" : "light")}
+                            onMouseEnter={handleRead}
+                            alt="ativar alto contraste"
+                        />
                     </div>
 
                 </div>

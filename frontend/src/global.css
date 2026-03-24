@@ -59,6 +59,9 @@ body[data-theme="dark"] {
   --svgBlack: white;
   
 }
+body[data-theme="high-contrast"] {
+    --branco:#0f172a;  /* Adicione as cores de alto contraste aqui */
+}
 h1, p, button, h2, h3, h4, h5, h6, span {
     font-family: sans-serif;
 }
@@ -72,5 +75,6 @@ a {
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
