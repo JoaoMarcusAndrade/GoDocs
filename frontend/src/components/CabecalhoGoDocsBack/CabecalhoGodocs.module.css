@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--azulClaroOpaco);
     border: 2px solid;
-    border-color: #031b83;
+    border-color: var(--bordanav);
     border-top: none;
     border-left: none;
     border-right: none;

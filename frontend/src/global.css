@@ -32,12 +32,14 @@
  --brancoDarkModeTexto: white;
  --cinzaDarkModeText2: #94a3b8;
  --font-size: 16px;
+ --bordanav:#031b83;
  
 }
 body{
     font-size: var(--font-size);
 }
 body[data-theme="dark"] {
+  --azulClaroOpaco:#2563eb;
   --branco: #0f172a;
   --textoPreto: white;
   --bordaLinha: #334155;
@@ -57,10 +59,13 @@ body[data-theme="dark"] {
   --bordaOtherButtons: #0f172a;
   --backOtherButtons: #151C2D;
   --svgBlack: white;
+  --bordanav:#334155;
   
 }
 body[data-theme="high-contrast"] {
-    --branco:#0f172a;  /* Adicione as cores de alto contraste aqui */
+    --branco:#000000;
+    --azulClaroOpaco:#141414;
+    --bordanav:none;
 }
 h1, p, button, h2, h3, h4, h5, h6, span {
     font-family: sans-serif;

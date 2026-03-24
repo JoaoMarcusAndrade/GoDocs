@@ -1,7 +1,4 @@
-body {
-    overflow-x: hidden;
-    overflow-y: hidden;    background: var(--cinza);
-}
+
 
 .Atividades{
     display: flex;
