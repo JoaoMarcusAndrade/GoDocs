@@ -8,7 +8,7 @@
     width: 91%;
 }
 .SegTit h1{
-    color: black;
+    color: var(--textoPreto);
     font-size: 1.5rem;
 }
 .SegTit h3{

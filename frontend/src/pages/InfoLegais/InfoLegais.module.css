@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 .title {
   font-size: 2rem; /* rem também ok */
   font-weight: bold;

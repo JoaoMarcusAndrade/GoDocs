@@ -60,7 +60,7 @@ body[data-theme="dark"] {
   --backOtherButtons: #151C2D;
   --svgBlack: white;
   --bordanav:#334155;
-  
+  --cinzaEscuro:#94a3b8;
 }
 body[data-theme="high-contrast"] {
     --branco:#000000;

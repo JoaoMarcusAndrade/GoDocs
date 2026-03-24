@@ -28,6 +28,7 @@
 }
 .SearchInput::placeholder{
     font-size: 1.1rem;
+    color: var(--textoPreto);
 }
 .SearchDiv a{
     width: 100%;
