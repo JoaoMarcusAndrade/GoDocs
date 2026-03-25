@@ -2,34 +2,54 @@
     border-radius: 50px;
     border: 2px solid;
     border-color: var(--bordaInput);
-    cursor: none;
     height: 7vh;
-    width: 80%;
-    margin-bottom: 3vh;/*transformar em vh*/
+    width: 90%;
+    max-width: 520px;
+    margin-bottom: 3vh;
     margin-top: 2vh;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
-    justify-content: end;
-    
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    padding: 0 12px;
+    background: var(--branco);
 }
 
-.SearchDiv svg{
+.SearchDiv svg {
     color: var(--svgIcons);
-    height: 3vh;
-    width: 5vh;
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
 }
 
 .SearchInput {
     height: 100%;
     border: none;
     width: 100%;
-    background: none;
-}
-.SearchInput::placeholder{
-    font-size: 1.1rem;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
     color: var(--textoPreto);
 }
-.SearchDiv a{
+
+.SearchInput::placeholder {
+    font-size: 1rem;
+    color: var(--textoCinza);
+}
+
+.SearchDiv a {
+    display: flex;
+    align-items: center;
     width: 100%;
+}
+
+@media (max-width: 480px) {
+    .SearchDiv {
+        width: 92%;
+        height: 8vh;
+    }
+    .SearchInput {
+        font-size: 0.95rem;
+    }
 }

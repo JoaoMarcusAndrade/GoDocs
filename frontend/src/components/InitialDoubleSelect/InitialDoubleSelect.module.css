@@ -1,48 +1,125 @@
 .InitialDoubleSelect {
-    border-radius: 10px;
+    border-radius: 14px;
     background: var(--backgroundAzulAcinzentado);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 39px;
-    height: 20vh;
+    margin-bottom: 1rem;
+    min-height: 170px;
     width: 90%;
-    gap: 20px;
+    max-width: 520px;
+    gap: 8px;
+    padding: 8px;
 }
+
 .InitialDoubleSelect p {
-   color: white;
+   color: #ffffff;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 0.95rem;
+   line-height: 1.2;
+   margin: 0;
 }
+
 .LineDoubleSelect {
-    height: 2px;
+    height: 1px;
     background: var(--azulLinha);
-    width: 90%;
+    width: 95%;
 }
+
 .DivImg {
-    background-color: white;
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 8px;
 }
+
 .DivSelects {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: flex-start;
     width: 100%;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding: 5px;
-    gap: 5px
+    padding: 14px;
+    gap: 12px;
 }
-.DivImg img{
-    width: 5vh;
-    height: 5vh;
-    margin-right: 6px;
+
+.TextWrapper {
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
 }
+
+.TextWrapper {
+    width: 58%;
+    min-width: 58%;
+}
+
+.Arrow {
+    color: #0248ff;
+    font-size: 1.2rem;
+    opacity: 0.95;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.DivImg img {
+    width: 42px;
+    height: 42px;
+}
+
+.InitialDoubleSelect p {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+}
+
 .DivAroundSelects {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    gap: 8px;
+}
 
+.CardLink {
+    width: 100%;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    overflow: hidden;
+}
+
+.CardLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+    .InitialDoubleSelect {
+        width: 96%;
+        padding: 10px;
+    }
+    .DivSelects {
+        padding: 8px;
+        gap: 10px;
+    }
+    .InitialDoubleSelect p {
+        font-size: 0.9rem;
+    }
 }

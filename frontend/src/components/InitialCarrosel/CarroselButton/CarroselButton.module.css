@@ -1,8 +1,18 @@
 .CarroselButton {
-    width: 20vh;
-    background-color:  var(--azulRoyal);
+    width: clamp(120px, 40vw, 180px);
+    background-color: var(--azulRoyal);
     color: white;
-    border-radius: 5px;;
-    height: 3vh;
-    border: 2px solid black;
+    border-radius: 10px;
+    height: 44px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: solid 2px;
+    border-color: black;
+}
+
+.CarroselButton:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
 }

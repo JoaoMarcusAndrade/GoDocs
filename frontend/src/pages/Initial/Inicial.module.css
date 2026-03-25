@@ -3,14 +3,32 @@
     flex-direction: column;
     align-items: center;
     background: var(--branco);
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 12px 8px 20px;
+    padding-bottom: calc(7vh + 24px);
+    min-height: calc(100vh - 7vh);
 }
+
 .InicialInfo {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 520px;
     margin-bottom: 2vh;
     color: var(--textoPreto);
 }
+
 .InicialInfo h3 {
     font-size: 1.7rem;
+    margin: 0;
+    line-height: 1.2;
 }
+
+.InicialInfo p {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+}
+

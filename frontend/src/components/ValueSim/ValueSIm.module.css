@@ -3,31 +3,61 @@
     border: 2px solid;
     border-color: var(--backgroundAzulAcinzentado);
     width: 90%;
+    max-width: 520px;
     margin-bottom: 3vh;
+    padding: 10px;
     display: flex;
     align-items: center;
 }
 
 .ValueSimSon {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
 }
 
 .ValueSimSonText {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .ValueSimSonText h6 {
-    font-size: medium;
-    padding-left: 13px;
+    font-size: 0.95rem;
+    margin: 0;
     color: var(--textoPreto);
+    font-weight: 600;
 }
 
 .ValueSimSonText p {
-    padding-left: 8px;
+    margin: 4px 0 0 0;
     color: var(--textoPreto);
-} 
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.ValueSim img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .ValueSim {
+        width: 96%;
+        padding: 10px;
+    }
+    .ValueSimSonText h6 {
+        font-size: 1rem;
+    }
+    .ValueSimSonText p {
+        font-size: 0.85rem;
+    }
+}
+ 
