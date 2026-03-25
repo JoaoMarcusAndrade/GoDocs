@@ -27,18 +27,6 @@ Cada aplicação possui suas próprias dependências e scripts.
 
 ---
 
-# 🧠 Objetivo da Branch
-
-Esta branch foi criada para:
-
-- Unificar backend e frontend no mesmo repositório
-- Implementar **npm workspaces**
-- Padronizar estrutura do projeto
-- Definir arquitetura backend
-- Preparar base para evolução do sistema
-
----
-
 # 📦 Tecnologias Utilizadas
 
 ## Backend
