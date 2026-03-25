@@ -14,7 +14,7 @@
 }
 
 .InitialDoubleSelect p {
-   color: #ffffff;
+   color: var(--altoText);
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-size: 0.95rem;
    line-height: 1.2;
@@ -57,8 +57,11 @@
 .TextWrapper {
     width: 58%;
     min-width: 58%;
+    
 }
-
+.TextWrapper p {
+    color: var(--altoText);
+}
 .Arrow {
     color: #0248ff;
     font-size: 1.2rem;

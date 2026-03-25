@@ -27,7 +27,7 @@ const Router = () => {
         <Routes>
 
             <Route path="/" element={<LayoutCadastro />}>
-                <Route index element={<Cadastro />} />
+                <Route index element={<Login />} />
                 <Route path="cadastro" element={<Cadastro />} />
                 <Route path="cadastrostep2" element={<CadastroStep2 />} />
                 <Route path="login" element={<Login />} />  

@@ -59,7 +59,7 @@ const CadastroStep2 = () => {
 
   return (
     <>
-      <CabecalhoForms BackButtonLink="/" Tittle="Criar conta" />
+      <CabecalhoForms BackButtonLink="/cadastro" Tittle="Criar conta" />
       <div className={style.Cad2}>
         <div className={style.PhotoUp}>
           <img

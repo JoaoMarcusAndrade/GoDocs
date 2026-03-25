@@ -49,7 +49,7 @@ const FA2 = () => {
 
   return (
     <>
-      <CabecalhoForms BackButtonLink="/" Tittle="Verificação de duas etapas" />
+      <CabecalhoForms BackButtonLink="/cadastro" Tittle="Verificação de duas etapas" />
 
       <div className={styles.container}>
         <p className={styles.text}>

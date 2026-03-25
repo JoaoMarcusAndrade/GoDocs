@@ -89,7 +89,7 @@ const Cadastro = () => {
                      </p>
                   ))}
                </div>
-               <Link to="login" className={style.AccQst}>Já tem conta?</Link>
+               <Link to="/login" className={style.AccQst}>Já tem conta?</Link>
 
                <ButtonForms ButtonFormsText="Continuar" ButtonOnClick={handleCadastro}></ButtonForms>
 
